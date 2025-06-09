@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --primario: #784D3C;
+    --terciario: cyan;
+    --claro: #e1e1e1e1;
+    --blanco: #ffffffff;
+    --negro: #000000fc;
+}
+
+h1, h2, h3, h4 {
+    font-family:var(--fuenteHeading);
+}
+
+p, a{
+    font-family: var(--fuenteParrafos);
+}
+
+
+.container {
+    background-color: #EEE;
+    transition: all 0.4s ease-out;
+
+} 
+
+/* Toggle Button */
+#toggle {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Making a dot switch inside the Toggle Button */
+#toggle::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #EEE;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in;
+}
+
+/* Changing toggle button background when checked */
+#toggle:checked {
+    background: #03FFC0;
+}
+
+/* Changing dot switch color and moving to the right side when checked */
+#toggle:checked::before {
+    background: #333;
+    left: 32px;
+}
+
+#toggle:checked ~ .container {
+    background-color: #333;
+    color: #EEE;
+}
+
+/*--------------------------------------------*/
+/*HEADER*/
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url(../assets/back_ground.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* mask-image: linear-gradient(black 90%, transparent); */
+    height: 60vh;
+    padding-bottom: 4rem;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem; 
+    padding-inline: 4rem;
+    color: var(--blanco);
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.name a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.name:hover{
+    transform: scale(1.1);
+    text-shadow: 3px 1px 5px var(--primario);
+}
+
+.bold_text{
+    font-weight: bold;
+}
+
+.navegation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.navegation_items {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--blanco);
+}
+
+.navegation_items:hover{
+    transform: scale(1.1);
+    text-shadow: 3px 1px 5px var(--terciario);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    font-size: 1.1rem;
+}
+
+/*--------------------------------------------*/
+
+/*MAIN*/
+
+.main_contenedor{
+    display: flex;
+    
+    justify-content: center;
+}
+
+.sub_container{
+    width: 66vw;
+
+}
+
+.titulo_articulos{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.article_section {
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--claro);
+}
+
+.left_article{
+    grid-column: 1 /2;
+    width: 22vw;
+    padding-bottom: 2rem;
+}
+
+.left_article:hover{
+    border-radius: 3px;
+    transform: scale(1.09);
+    text-shadow: 3px 1px 5px var(--primario);
+}
+
+.right_article{
+    grid-column: 2 /3;
+}
+
+.sub_title_article {
+    font-size: 1.8rem;
+}
+
+.paragraph{
+    font-size: 1.3rem;
+    padding-block: 1rem;
+}
+
+
+/*--------------------------------------------*/
+/*FOOTER*/
+footer {
+    background-color: var(--negro);
+    width: 100vw;
+    height: 20vh;
+    padding-bottom: 3rem;
+    margin-top: 8rem;
+}
+
+
+
+
+/*--------------------------------------------*/
+/*RESPONSIVE*/
+
+@media (max-width:768px){
+    .bar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name{
+        
+        text-align: center;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article_section {
+        grid-template-columns: 1;
+    }
+
+    .left_article{
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .right_article{
+        grid-column: 1;
+    }
+
+    footer{
+        height: 40vh;
+    }
+}
+
+
+@media (max-width: 480px){
+    .bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .name{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description h2 {
+        font-size: 1.8rem;
+    }
+    .article_section {
+        grid-template-columns: 1;
+    }
+
+    .left_article{
+        grid-column: 1;
+    }
+
+    .right_article{
+        grid-column: 1;
+    }
+    footer{
+        height: 40vh;
+    }
+}
+
+
