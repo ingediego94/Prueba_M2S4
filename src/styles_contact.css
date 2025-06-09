@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
     font-family:var(--fuenteHeading);
 }
 
-p, a{
+p, a, form, label, input, textarea{
     font-family: var(--fuenteParrafos);
 }
 
@@ -107,7 +107,6 @@ header{
     font-size: 3rem;
     font-weight: 400;
 }
-
 .name a {
     text-decoration: none;
     color: var(--blanco);
@@ -163,7 +162,6 @@ header{
 
 .main_contenedor{
     display: flex;
-    
     justify-content: center;
 }
 
@@ -172,11 +170,11 @@ header{
 
 }
 
-.titulo_articulos{
+.presentation {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .article_section {
@@ -184,23 +182,22 @@ header{
     grid-template-columns: 2, 1fr;
     gap: 1.5rem;
     margin-bottom: 3rem;
-    border-bottom: 2px solid var(--claro);
+
 }
 
 .left_article{
     grid-column: 1 /2;
-    width: 22vw;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-bottom: 2rem;
-}
-
-.left_article:hover{
-    border-radius: 3px;
-    transform: scale(1.09);
-    text-shadow: 3px 1px 5px var(--primario);
 }
 
 .right_article{
     grid-column: 2 /3;
+    width: 22vw;
+    border-radius: 50%;
 }
 
 .sub_title_article {
@@ -210,6 +207,78 @@ header{
 .paragraph{
     font-size: 1.3rem;
     padding-block: 1rem;
+
+}
+
+.normal_paragraph{
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+.buttom {
+    margin: 3rem;
+    border: 1px solid var(--negro);
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgb(2, 2, 46);
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    color: var(--claro);
+}
+
+
+/*FORM*/
+
+
+
+
+.controls {
+    width: 100%;
+    background-color: var(--claro);
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid #1f53c5;
+    font-family: var(--fuenteParrafos);
+    font-size: 1.3rem;
+}
+
+.right_article p {
+    height: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.right_article a {
+    color: var(--azul_osc);
+    text-decoration: none;
+}
+
+.right_article a:hover {
+    color: var(--negro);
+    text-decoration: underline;
+}
+
+
+
+#boton{
+    width: 100%;
+    background-color: var(--azul_osc);
+    border: none;
+    border-radius: 6px;
+    padding: 1rem;
+    color: var(--blanco);
+    margin: 1.2rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#boton:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-weight: bold;
 }
 
 
@@ -256,6 +325,8 @@ footer {
 
     .right_article{
         grid-column: 1;
+        height: 40vh;
+        width: auto;
     }
 
     footer{
@@ -268,7 +339,6 @@ footer {
     .bar{
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
     .name{
         font-size: 2rem;
@@ -283,6 +353,7 @@ footer {
     .description h2 {
         font-size: 1.8rem;
     }
+
     .article_section {
         grid-template-columns: 1;
     }
@@ -293,10 +364,13 @@ footer {
 
     .right_article{
         grid-column: 1;
+        display: flex;
+        justify-content: center;
+        height: 40vh;
+        width: auto;
     }
     footer{
         height: 40vh;
     }
 }
-
 
