@@ -116,6 +116,7 @@ header{
 .name:hover{
     transform: scale(1.1);
     text-shadow: 3px 1px 5px var(--primario);
+    transition: 2s;
 }
 
 .bold_text{
@@ -138,6 +139,7 @@ header{
 .navegation_items:hover{
     transform: scale(1.1);
     text-shadow: 3px 1px 5px var(--terciario);
+    transition: 1.5s;
 }
 
 .description {
@@ -191,12 +193,15 @@ header{
     grid-column: 1 /2;
     width: 22vw;
     padding-bottom: 2rem;
+    animation: fade 2s ease-in-out;
 }
 
 .left_article:hover{
     border-radius: 3px;
     transform: scale(1.09);
+    transition: 2s;
     text-shadow: 3px 1px 5px var(--primario);
+
 }
 
 .right_article{
@@ -212,6 +217,14 @@ header{
     padding-block: 1rem;
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /*--------------------------------------------*/
 /*FOOTER*/
@@ -240,7 +253,7 @@ footer {
         text-align: center;
     }
 
-    .navegacion{
+    .navegation{
         display: flex;
         flex-direction: column;
     }
@@ -275,7 +288,7 @@ footer {
         text-align: center;
     }
 
-    .navegacion{
+    .navegation{
         display: flex;
         flex-direction: column;
     }

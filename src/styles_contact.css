@@ -115,6 +115,7 @@ header{
 .name:hover{
     transform: scale(1.1);
     text-shadow: 3px 1px 5px var(--primario);
+    transition: 2s;
 }
 
 .bold_text{
@@ -137,6 +138,7 @@ header{
 .navegation_items:hover{
     transform: scale(1.1);
     text-shadow: 3px 1px 5px var(--terciario);
+    transition: 1.5s;
 }
 
 .description {
@@ -170,7 +172,7 @@ header{
 
 }
 
-.presentation {
+.contact-us {
     text-align: center;
     font-size: 3rem;
     margin-top: 2rem;
@@ -309,7 +311,7 @@ footer {
         text-align: center;
     }
 
-    .navegacion{
+    .navegation{
         display: flex;
         flex-direction: column;
     }
@@ -345,7 +347,7 @@ footer {
         text-align: center;
     }
 
-    .navegacion{
+    .navegation{
         display: flex;
         flex-direction: column;
     }

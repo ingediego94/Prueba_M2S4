@@ -90,7 +90,6 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /* mask-image: linear-gradient(black 90%, transparent); */
     height: 60vh;
     padding-bottom: 4rem;
 }
@@ -115,6 +114,7 @@ header{
 .name:hover{
     transform: scale(1.1);
     text-shadow: 3px 1px 5px var(--primario);
+    transition: 2s;
 }
 
 .bold_text{
@@ -137,6 +137,7 @@ header{
 .navegation_items:hover{
     transform: scale(1.1);
     text-shadow: 3px 1px 5px var(--terciario);
+    transition: 1.5s;
 }
 
 .description {
@@ -196,8 +197,10 @@ header{
 
 .right_article{
     grid-column: 2 /3;
-    width: 22vw;
+    width: 35vw;
     border-radius: 50%;
+    box-shadow: 0px 0px 15px #7b8978;
+    animation: fade 2s ease-in-out;
 }
 
 .sub_title_article {
@@ -226,9 +229,25 @@ header{
     font-size: 1.5rem;
     box-sizing: border-box;
     color: var(--claro);
+    box-shadow: 0px 0px 15px #7b8978;
+    animation: fade 2s ease-in-out;
 }
 
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.buttom:hover{
+    transform: translateX(1rem);
+    transition: 2s;
+}
 
 /*--------------------------------------------*/
 /*FOOTER*/
@@ -257,7 +276,7 @@ footer {
         text-align: center;
     }
 
-    .navegacion{
+    .navegation{
         display: flex;
         flex-direction: column;
     }
@@ -293,7 +312,7 @@ footer {
         text-align: center;
     }
 
-    .navegacion{
+    .navegation{
         display: flex;
         flex-direction: column;
     }
@@ -322,10 +341,3 @@ footer {
     }
 }
 
-/*https://codepen.io/mutedblues/pen/MmPNPG
-<img
-  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
-  src="elva-fairy-640w.jpg"
-  alt="Elva dressed as a fairy" />
-
-*/
